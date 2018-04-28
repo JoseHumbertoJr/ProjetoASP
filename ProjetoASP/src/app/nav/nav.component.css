@@ -1,0 +1,12 @@
+.dropdown-menu.show {
+    display: block;
+    margin-left: -120%;
+    text-align: initial;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+.body{
+    background-color: darkgray;
+    width: 100%;
+}
