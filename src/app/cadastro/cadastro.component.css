@@ -1,0 +1,28 @@
+.body{
+    background-color: darkgray;
+    background-size: 100%;
+    margin-top: 5%;
+    height: 100%;
+    width: 100%;
+}
+
+.btn-primary[_ngcontent-c1] {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    margin-left: 60%;
+    margin-top: -2%;
+
+}
+.titulo{
+    text-align: center;
+    margin-top: -5%;
+    background-color: darkgray;
+    font-family: 'Black Han Sans', sans-serif;
+    
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

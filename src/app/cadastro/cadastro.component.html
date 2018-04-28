@@ -1,0 +1,68 @@
+<app-nav></app-nav>
+<div class="body">
+    <h1 class="titulo">Cadastro</h1>
+    <div class="col-md-12 center">
+        <div class="col-md-6">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Nome</label>
+                        <input [(ngModel)]="paciente.nome" name="nome" type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress">Endereço</label>
+                    <input [(ngModel)]="paciente.endereco" name="endereco" type="text" class="form-control" id="inputAddress" placeholder="Rua, Bairro , Cep">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress2">Nome da Mãe</label>
+                    <input [(ngModel)]="paciente.nomeDaMae" name="nomeDaMae" type="text" class="form-control" id="inputAddress2" placeholder="Nome da Mãe">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputPassword4">CPF</label>
+                        <input [(ngModel)]="paciente.cpf" name="cpf" type="number" class="form-control" id="inputPassword4" placeholder="CPF">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputCity">Data de Nascimento</label>
+                        <input [(ngModel)]="paciente.dataDeNascimento" name="data" type="date" class="form-control" id="inputCity">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="inputState">Cidade</label>
+                        <select [(ngModel)]="paciente.cidade" name="cidade" class="form-control">
+                            <option *ngFor="let city of cityOptions" [ngValue]="city">{{city}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Em Espera</label>
+                        <select [(ngModel)]="paciente.espera" name="emEspera" class="form-control">
+                            <option *ngFor="let option of esperaOptions" [ngValue]="option">{{option}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Sexo</label>
+                        <select [(ngModel)]="paciente.sexo" name="sexo" class="form-control">
+                            <option *ngFor="let sexo of sexoOptions" [ngValue]="option">{{sexo}}</option>
+                        </select>
+                    </div>
+
+                </div>
+                <a routerLink="/prontuario">
+                    <button type="submit" class="btn btn-primary">Prosseguir</button>
+                </a>
+            </form>
+        </div>
+    </div>
+    <p>
+        
+    </p>
+</div>

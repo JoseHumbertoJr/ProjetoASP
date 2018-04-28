@@ -1,0 +1,61 @@
+<app-nav></app-nav>
+<div class="body">
+    <h1 class="titulo">Prontuario</h1>
+    <div class="col-md-12 center">
+        <div class="col-md-6">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputEmail4">Nome</label>
+                        <input [(ngModel)]="ficha.nomeDoPaciente" name="nome" type="email" class="form-control" id="inputEmail4" placeholder="Nome">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <label for="inputPassword4">Doença</label>
+                        <input [(ngModel)]="ficha.doenca" name="cpf" type="text" class="form-control" id="inputPassword4" placeholder="Doença">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <P>Sintomas</P>
+                        <textarea [(ngModel)]="ficha.sintomas" name="sintomas" class="form-control" type="text" placeholder="sintomas"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="inputState">Localidade</label>
+                    <input [(ngModel)]="ficha.localidade" name="nome" type="email" class="form-control" id="inputEmail4" placeholder="Localidade">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputCity">Data de Nascimento</label>
+                        <input [(ngModel)]="ficha.data" name="data" type="date" class="form-control" id="inputCity">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Observação</label>
+                        <select [(ngModel)]="ficha.observacoes" name="observacoes" class="form-control">
+                            <option *ngFor="let option of observacaoOptions" [ngValue]="option">{{option}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Alergico</label>
+                        <select [(ngModel)]="ficha.alergico" name="alergia" class="form-control">
+                            <option *ngFor="let option of alergicoOptions" [ngValue]="option">{{option}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Diabetes</label>
+                        <select [(ngModel)]="ficha.diabetes" name="diabetes" class="form-control">
+                            <option *ngFor="let option of diabetesOptions" [ngValue]="option">{{option}}</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <button type="button" class="btn btn-success">Salvar</button>
+        </div>
+    </div>
+</div>
